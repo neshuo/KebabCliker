@@ -1,16 +1,16 @@
-import 'dart:convert';
+// import 'dart:convert';
 
-import 'package:flutter/services.dart';
+// import 'package:flutter/services.dart';
 
-class CardProvider {
-  List<dynamic> cards = [];
+// class CardProvider {
+//   List<dynamic> cards = [];
 
-  Future<List<dynamic>> cargarData() async {
-    final respuesta = await rootBundle.loadString('data/cards.json');
-    Map<String, dynamic> dataMap = json.decode(respuesta);
-    cards = dataMap['lista'];
-    return cards;
-  }
-}
+//   Future<List<dynamic>> cargarData() async {
+//     final respuesta = await rootBundle.loadString('data/cards.json');
+//     Map<String, dynamic> dataMap = json.decode(respuesta);
+//     cards = dataMap['lista'];
+//     return cards;
+//   }
+// }
 
-final cardProvider = CardProvider();
+// final cardProvider = CardProvider();
