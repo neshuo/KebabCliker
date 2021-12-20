@@ -9,6 +9,7 @@ class keb extends StatefulWidget {
 
 class KebabButton extends State<keb> {
   int _kebabs = 0;
+  String button = 'assets/images/kebab_button_3D.png';
 
   void _ClikKebab() {
     setState(() {
@@ -23,13 +24,26 @@ class KebabButton extends State<keb> {
         children: <Widget>[
           SizedBox(height: 35),
           Container(
-            child: Text('$_kebabs' " Kebabs",
-                textAlign: TextAlign.center, style: TextStyle(fontSize: 80)),
+            child: Text(
+              '$_kebabs' " Kebabs",
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 50),
+            ),
           ),
           SizedBox(height: 80),
           IconButton(
-            onPressed: _ClikKebab,
-            icon: Image.asset('assets/images/botonkebab.png'),
+            onPressed: () {
+              _ClikKebab();
+              // setState(() async {
+              //   button = "assets/images/kebab_button_3D_pressed.png";
+              //   await Future.delayed(const Duration(milliseconds: 350), () {
+              //     setState(() {
+              //       button = 'assets/images/kebab_button_3D.png';
+              //     });
+              //   });
+              // });
+            },
+            icon: Image.asset(button),
             color: Colors.blue,
             iconSize: 200,
             padding: new EdgeInsets.all(0.0),

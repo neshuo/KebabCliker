@@ -1,13 +1,38 @@
 
 [
     {
-        "titulo" : "cosa 1",
+        "titulo" : "upgrade 1",
         "descripcion": "descripcion cosa 1",
         "icono" : "assets/images/vendedor_amigo.png"
     },
     {
-        "titulo" : "cosa 2",
+        "titulo" : "upgrade 2",
         "descripcion": "descripcion cosa 2",
+        "icono" : "assets/images/mochillo1.png"
+    },
+    {
+        "titulo" : "upgrade 3",
+        "descripcion": "descripcion cosa 3",
+        "icono" : "assets/images/restorante1.png"
+    },
+    {
+        "titulo" : "upgrade 4",
+        "descripcion": "descripcion cosa 4",
+        "icono" : "https://www.sistemaimpulsa.com/blog/wp-content/uploads/2019/03/vendedores-300x200.jpg"
+    },
+    {
+        "titulo" : "upgrade 4",
+        "descripcion": "descripcion cosa 4",
+        "icono" : "https://www.sistemaimpulsa.com/blog/wp-content/uploads/2019/03/vendedores-300x200.jpg"
+    },
+    {
+        "titulo" : "upgrade 5",
+        "descripcion": "descripcion cosa 5",
+        "icono" : "https://www.sistemaimpulsa.com/blog/wp-content/uploads/2019/03/vendedores-300x200.jpg"
+    },
+    {
+        "titulo" : "upgrade 6",
+        "descripcion": "descripcion cosa 6",
         "icono" : "https://www.sistemaimpulsa.com/blog/wp-content/uploads/2019/03/vendedores-300x200.jpg"
     }
 ]
