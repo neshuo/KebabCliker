@@ -7,8 +7,11 @@ class keb extends StatefulWidget {
   State<keb> createState() => KebabButton();
 }
 
-class KebabButton extends State<keb> {
+@override
+class MyStatelessWidget extends State<keb> {
   int _kebabs = 0;
+  String boton = "3DbotonKebab.png";
+  static AudioCache player = AudioCache();
 
   void _ClikKebab() {
     setState(() {
@@ -16,11 +19,13 @@ class KebabButton extends State<keb> {
     });
   }
 
+  @override
   Widget build(BuildContext context) {
     return Material(
-        child: Center(
-      child: Column(
-        children: <Widget>[
+      child: Scaffold(
+        appBar: ,
+        body:Column(
+          children: [
           SizedBox(height: 35),
           Container(
             child: Text('$_kebabs' " Kebabs",
@@ -28,14 +33,22 @@ class KebabButton extends State<keb> {
           ),
           SizedBox(height: 80),
           IconButton(
-            onPressed: _ClikKebab,
-            icon: Image.asset('assets/images/botonkebab.png'),
-            color: Colors.blue,
-            iconSize: 200,
-            padding: new EdgeInsets.all(0.0),
-          )
+              icon: Image.asset(boton),
+              color: Colors.blue,
+              iconSize: 200,
+              padding: new EdgeInsets.all(0.0),
+              onPressed: () {
+                _ClikKebab();
+                setState(() async {
+                  boton = "3Dbo.png";
+                  //player.play("clicar.mp3");
+                  await Future.delayed(const Duration(milliseconds: 350), () {
+                    setState(() {
+                      boton = "3Dbotonkebab.png";
+                    });
+                  });
+                });
+              })
         ],
       ),
-    ));
-  }
-}
+    );

@@ -1,13 +1,18 @@
 
 [
     {
-        "titulo" : "cosa 1",
-        "descripcion": "descripcion cosa 1",
-        "icono" : "assets/images/vendedor_amigo.png"
+        "titulo" : "vendedor amigo",
+        "descripcion": "vendedor amigo, generara 5kebabs/s de forma pasiva gracias a su gran confianza con los clientes",
+        "icono" : "https://imgur.com/8xgapaZ"
     },
     {
-        "titulo" : "cosa 2",
-        "descripcion": "descripcion cosa 2",
-        "icono" : "https://www.sistemaimpulsa.com/blog/wp-content/uploads/2019/03/vendedores-300x200.jpg"
+        "titulo" : "kebab de la esquina",
+        "descripcion": "puede que no tenga la mejor sanidad pero puede generar 50 kebabs/s",
+        "icono" : "https://imgur.com/3XVoUAv"
+    },
+    {
+        "titulo":"moto destartalada",
+        "descripcion":"no sera la mas rapida pero si la que mejor huele, genera 100k/s",
+        "icono":"https://imgur.com/w4FUick"
     }
 ]
