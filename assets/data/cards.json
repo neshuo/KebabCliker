@@ -1,0 +1,13 @@
+
+[
+    {
+        "titulo" : "cosa 1",
+        "descripcion": "descripcion cosa 1",
+        "icono" : "assets/images/vendedor_amigo.png"
+    },
+    {
+        "titulo" : "cosa 2",
+        "descripcion": "descripcion cosa 2",
+        "icono" : "https://www.sistemaimpulsa.com/blog/wp-content/uploads/2019/03/vendedores-300x200.jpg"
+    }
+]

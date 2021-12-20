@@ -1,42 +1,45 @@
 import 'package:flutter/material.dart';
+import 'package:kebabcliker/src/pages/upgrade_page.dart';
+import 'package:kebabcliker/src/providers/kebab_button_provider.dart';
 
-class keb extends StatefulWidget {
-  const keb({Key? key, required this.title}) : super(key: key);
-  final String title;
-
+class HomePage extends StatefulWidget {
   @override
-  State<keb> createState() => HomePage();
+  _HomePage createState() => _HomePage();
 }
 
-class HomePage extends State<keb> {
-  int _kebabs = 0;
+class _HomePage extends State<HomePage> {
+  int currentIndex = 0;
 
-  void _ClikKebab() {
-    setState(() {
-      _kebabs++;
-    });
-  }
+  //Aquí van las diferentes pages
+  final screens = [
+    keb(),
+    UpgradePage(),
+  ];
 
-  Widget build(BuildContext context) {
-    return Material(
-        child: Center(
-      child: Column(
-        children: <Widget>[
-          SizedBox(height: 35),
-          Container(
-            child: Text('$_kebabs' " Kebabs",
-                textAlign: TextAlign.center, style: TextStyle(fontSize: 80)),
-          ),
-          SizedBox(height: 80),
-          IconButton(
-            onPressed: _ClikKebab,
-            icon: Image.asset('assets/images/botonkebab.png'),
-            color: Colors.blue,
-            iconSize: 200,
-            padding: new EdgeInsets.all(0.0),
-          )
-        ],
-      ),
-    ));
-  }
+  @override
+  Widget build(BuildContext context) => Scaffold(
+        // appBar: AppBar(
+        //   title: Text('Bottom Navigaton Bar'),
+        //   centerTitle: true,
+        // ),
+        body: screens[currentIndex],
+        bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.shifting,
+          currentIndex: currentIndex,
+          onTap: (index) => setState(() =>
+              currentIndex = index), //Se utiliza para navegar por la barra
+          items: const [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              label: 'Home',
+              backgroundColor: Colors.green,
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.arrow_upward),
+              label: 'Upgrades',
+              backgroundColor: Colors.red,
+            ),
+          ],
+        ),
+      );
 }

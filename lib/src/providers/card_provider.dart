@@ -1,16 +1,19 @@
-// import 'dart:convert';
+import 'package:flutter/cupertino.dart';
 
-// import 'package:flutter/services.dart';
+class CardProvider {
+  final String titulo;
+  final String descripcion;
+  final String icono;
 
-// class CardProvider {
-//   List<dynamic> cards = [];
+  const CardProvider({
+    required this.titulo,
+    required this.descripcion,
+    required this.icono,
+  });
 
-//   Future<List<dynamic>> cargarData() async {
-//     final respuesta = await rootBundle.loadString('data/cards.json');
-//     Map<String, dynamic> dataMap = json.decode(respuesta);
-//     cards = dataMap['lista'];
-//     return cards;
-//   }
-// }
-
-// final cardProvider = CardProvider();
+  static CardProvider fromJson(json) => CardProvider(
+        titulo: json['titulo'],
+        descripcion: json['descripcion'],
+        icono: json['icono'],
+      );
+}
